@@ -1,0 +1,176 @@
+.Game {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.Game__TopBar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.Game__Hand {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 150px;
+  width: 100vw;
+}
+
+.Game__Hand__Card {
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  z-index: 6;
+  border-radius: 15px;
+  width: 150px;
+}
+
+.Game__Hand__Card-selected {
+  top: -70px !important;
+  z-index: 5 !important;
+  box-shadow: 0 0 40px 20px rgba(133,0,0,0.3) !important;
+}
+
+.Game__Hand__Card img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.Game__Hand__Card:hover {
+  top: -30px;
+  z-index: 10;
+  box-shadow: 0 0 40px 20px rgba(0,0,0,0.3);
+}
+
+.Game__InfoPlayers {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 300px;
+  height: 500px;
+  transform: translate(0, -50%);
+  padding: 30px;
+  border-radius: 20px 0 0 20px;
+  background: linear-gradient(to right ,rgba(214, 186, 186, 0.1), rgba(214, 186, 186, 0.4) 30%); 
+}
+
+.Game__Stack {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 150px;
+}
+
+.Game__Stack__Card {
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  z-index: 6;
+  border-radius: 15px;
+  width: 150px;
+}
+
+.Game__Stack__Card img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.Game__Buttons {
+  position: absolute;
+  right: 150px;
+  bottom: 50px;
+  width: 200px;
+}
+
+.Game__Buttons form input {
+  width: 100%;
+  padding: 5px 10px;
+  background-color: pink;
+  border: none;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);
+  margin: 10px;
+  transition: all 0.3s;
+}
+
+.Game__Buttons form input:hover{
+  transform: translate(-3px, -3px);
+  box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.Game__Chat {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 500px;
+  
+  padding: 30px 20px;
+  border-radius: 0 20px 20px 0;
+  background: linear-gradient(to left,rgba(214, 186, 186, 0.1), rgba(214, 186, 186, 0.4) 20%); 
+  display: flex;
+  flex-direction: column;
+}
+
+.Game__Chat__Buttons input{
+  padding: 5px 10px;
+  background-color: pink;
+  border: none;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);
+  margin: 10px;
+  transition: all 0.3s;
+}
+
+.Game__Chat__Buttons input:hover{
+  transform: translate(-3px, -3px);
+  box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.Game__Chat__Messages {
+  max-height: 375px;
+  overflow-y: scroll;
+  flex-grow: 1;
+  list-style-type: none;
+  padding: 5px; 
+  margin: 5px; 
+  text-align: left;
+}
+
+.Game__Chat__Messages li {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 2px;
+}
+
+.Game__Chat__Send {
+
+}
+
+.Game__Chat__Send input {
+  width: 80%;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
+.Game__LeaveGame {
+  position: absolute;
+  top: 20px;
+  right: 100px;
+}
+
+.Game__LeaveGame form input {
+  padding: 5px 10px;
+  background-color: pink;
+  border: none;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);
+  margin: 10px;
+  transition: all 0.3s;
+  font-size: 18px;
+}
